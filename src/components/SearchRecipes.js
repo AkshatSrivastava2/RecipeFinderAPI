@@ -11,7 +11,8 @@ class SearchRecipes extends Component{
         } 
     }
     search(){
-        const url=`http://www.recipepuppy.com/api/?i=${this.state.ingredients}&q=${this.state.dish}`;
+        let { ingredients,dish }=this.state;
+        const url=`http://www.recipepuppy.com/api/?i=${ingredients}&q=${dish}`;
         console.log(url);
         console.log('state',this.state);
     }
